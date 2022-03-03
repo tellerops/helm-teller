@@ -5,6 +5,7 @@ if [ -n "${HELM_LINTER_PLUGIN_NO_INSTALL_HOOK}" ]; then
     exit 0
 fi
 
+cd helm-teller
 version="$(cat plugin.yaml | grep "version" | cut -d '"' -f 2)"
 echo "Downloading and installing helm-teller v${version} ..."
 
@@ -43,5 +44,6 @@ mkdir -p "releases/v${version}"
 
 curl -sSL "${url}" -o "releases/v${version}.tar.gz"
 tar xzf "releases/v${version}.tar.gz" -C "releases/v${version}"
-mv "releases/v${version}/bin/helm-teller" "bin/teller" || \
-    mv "releases/v${version}/bin/helm-teller.exe" "bin/teller"
+mv "releases/v${version}/helm-teller" "bin/telle" || \
+    mv "releases/v${version}/helm-teller.exe" "bin/telle"
+rm -rf "releases"
