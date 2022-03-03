@@ -1,10 +1,10 @@
 name: "teller"
 
-version: "0.1.0"
+version: "0.0.1"
 usage: "Helm Teller plugin"
 description: "Helm Teller plugin allows you to pull any values from the supported provider into your helm chart"
 
 command: "$HELM_PLUGIN_DIR/bin/teller"
 hooks:
-  install: "$HELM_PLUGIN_DIR/scripts/install-binary.sh"
-  update: "$HELM_PLUGIN_DIR/scripts/install-binary.sh"
+  install: "$HELM_PLUGIN_DIR/scripts/install.sh"
+  update: "$HELM_PLUGIN_DIR/scripts/install.sh"
