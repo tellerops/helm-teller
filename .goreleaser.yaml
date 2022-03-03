@@ -1,0 +1,43 @@
+#before:
+builds:
+  - env:
+      - CGO_ENABLED=0
+    goos:
+      - darwin
+      - linux
+      - windows
+    goarch:
+      - amd64
+      - arm
+      - arm64
+    goarm:
+      - "6"
+      - "7"
+    ldflags:
+      - -s -w -X helm-teller/cmd.version={{.Version}} -X helm-teller/cmd.commit={{.Commit}}
+archives:
+  - id: helm-teller
+    format: tar.gz
+    files:
+      - LICENSE
+      - plugin.yaml
+      
+checksum:
+  name_template: 'checksums.txt'
+
+# brews:
+#   - name: helm-teller
+#     tap:
+#       owner: spectralops
+#       name: homebrew-tap
+#       token: "{{ secrets.HOMEBREW_TAP_GITHUB_TOKEN }}"
+#     description: Helm plugin for pull secrets and configuration time when you deploy a helm chart.
+#     homepage: https://github.com/spectralops/helm-teller
+#     license: "MIT"
+
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - '^docs:'
+      - '^test:'

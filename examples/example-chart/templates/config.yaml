@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-config-map
+data:
+  redis-host: {{ .Values.teller.host }}
+  redis-password: {{ .Values.teller.password }}
+  loglevel: {{ .Values.teller.loglevel }}

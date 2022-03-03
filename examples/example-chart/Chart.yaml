@@ -1,0 +1,7 @@
+apiVersion: v2
+name: example-chart
+description: Example helm chart form helm-teller plugin
+
+type: application
+version: 0.1.0
+appVersion: "1.16.0"
