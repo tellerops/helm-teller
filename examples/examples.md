@@ -2,7 +2,7 @@
 
 ## Pre-requirements
 * helm-teller installed
-* running configured Kubernetes cluster 
+* running Kubernetes cluster 
 
 Run [run.sh](./run.sh) file of do the following steps. run [clear.sh](./clear.sh) to delete `docker` container after your test.
 

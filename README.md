@@ -17,14 +17,16 @@
 
 # Helm-teller
 
-Helm [Teller](https://github.com/SpectralOps/teller) allows you to pull secrets or configuration setting when you deploy a helm chart.
+Helm [Teller](https://github.com/SpectralOps/teller) 
+Allows you to manage configuration and secrets from multiple providers and while masking the secrets at the deployment
+
 
 ## Why should i use it?
-* More secure while using `--debug` or `--dry-run` the secrets will not showed in the STDOUT
+* More secure while using `--debug` or `--dry-run` the secrets will not show in the STDOUT
 * Simple to integrate
 * Rich of supported plugins
-* Pull configuration and secret from multiple provider in one place
-* Manage configuration from development to production in same way
+* Pull configuration and secret from multiple providers in one place
+* Manage configuration from development to production in the same way
 
 
 ![](media/helm-teller.gif)
@@ -60,7 +62,7 @@ data:
   redis-password: {{ .Values.teller.password }}
   loglevel: {{ .Values.teller.loglevel }}
 ```
-* Run helm teller deploy `helm teller [install/upgrade] -- {HELM FLAGS}`.
+* Run helm teller deploy `helm teller [install/upgrade] {PLUGIN_FLAGS} -- {NATIVE_HELM_FLAGS}`.
  
 
 See working example [here](./examples/examples.md)
