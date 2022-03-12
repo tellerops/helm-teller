@@ -39,7 +39,11 @@ func newDeploymentCommand(deployType string) *cobra.Command {
 			var stderr bytes.Buffer
 			exitCode := pkg.ExecCommand(helmBinary, helmCustomFlags, &stdout, &stderr)
 
+			if exitCode != 0 {
+				fmt.Println(stderr.String())
+			}
 			fmt.Println(pkg.MaskHelmOutput(stdout.String(), entries))
+
 			os.Exit(exitCode)
 		},
 	}

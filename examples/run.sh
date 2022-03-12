@@ -24,4 +24,4 @@ docker exec consul-helm-teller sh -c "consul kv put redis/config/password 1234"
 echo "adding log level config"
 docker exec consul-helm-teller sh -c "consul kv put log-level debug"
 
-echo "You can run `clear.sh` for cleanup"
+echo "You can run clear.sh for cleanup"

@@ -18,7 +18,7 @@
 # Helm-teller
 
 Helm [Teller](https://github.com/SpectralOps/teller) 
-Allows you to manage configuration and secrets from multiple providers and while masking the secrets at the deployment
+Allows you to inject configuration and secrets from multiple providers into your chart while masking the secrets at the deployment.
 
 
 ## Why should i use it?
@@ -67,25 +67,7 @@ data:
 
 See working example [here](./examples/examples.md)
 
-## Testing
-To run unit tests:
-```sh
-$ make test
-```
 
-### Linting
-Linting is treated as a form of testing (using `golangci`), to run:
-```sh
-$ make lint
-```
+## Contributing
 
-### Formatting
-Run go fmt check:
-```sh
-$ make fmt
-```
-
-### Run all checks:
-```sh
-$ make checks
-```
+See the [contributing](./CONTRIBUTING.md) directory for more developer documentation
