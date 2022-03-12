@@ -10,7 +10,8 @@ import (
 )
 
 type deployCmd struct {
-	show bool
+	show           bool
+	disableMasking bool
 }
 
 // newDeploymentCommand creates a helm wrapper deployment command
@@ -42,14 +43,19 @@ func newDeploymentCommand(deployType string) *cobra.Command {
 			if exitCode != 0 {
 				fmt.Println(stderr.String())
 			}
-			fmt.Println(pkg.MaskHelmOutput(stdout.String(), entries))
+			if deployCmd.disableMasking {
+				fmt.Println(stdout.String())
+			} else {
+				fmt.Println(pkg.MaskHelmOutput(stdout.String(), entries))
+			}
 
 			os.Exit(exitCode)
 		},
 	}
 
 	f := cmd.Flags()
-	f.BoolVar(&deployCmd.show, "show", false, "Print in a human friendly, secure format")
+	f.BoolVar(&deployCmd.show, "show", false, "Print in a human friendly, secure format.")
+	f.BoolVar(&deployCmd.disableMasking, "disable-masking", false, "Disable configuration masking.")
 
 	return cmd
 
