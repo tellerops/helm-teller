@@ -24,13 +24,13 @@ var (
 )
 
 const rootCmdLongUsage = `
-Helm Teller plugin
+Helm Teller Allows you to inject configuration and secrets from multiple providers into your chart while masking the secrets at the deployment.
 
-* Secret manager 
-
-* Wrapping helm 
-
-* Allows you combine multiple providers configurations in one place
+* More secure while using --debug or --dry-run the secrets will not show in the STDOUT.
+* Simple to integrate.
+* Rich of supported plugins.
+* Pull configuration and secret from multiple providers in one place.
+* Manage configuration from development to production in the same way.
 `
 
 func New() *cobra.Command {
