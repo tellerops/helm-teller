@@ -14,6 +14,10 @@
 <br/><br/><br/>
 <hr/>
 </p>
+<p align="center">
+<img src="https://github.com/spectralops/helm-teller/actions/workflows/ci.yml/badge.svg"/>
+<img src="https://github.com/spectralops/helm-teller/actions/workflows/release.yaml/badge.svg"/>
+</p>
 
 # Helm-teller
 
