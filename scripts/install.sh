@@ -44,5 +44,5 @@ mkdir -p "releases/v${version}"
 
 curl -sSL "${url}" -o "releases/v${version}.tar.gz"
 tar xzf "releases/v${version}.tar.gz" -C "releases/v${version}"
-mv "releases/v${version}/helm-teller" "bin/telle" || \
-    mv "releases/v${version}/helm-teller.exe" "bin/telle"
+mv "releases/v${version}/helm-teller" "bin/teller" || \
+    mv "releases/v${version}/helm-teller.exe" "bin/teller"
