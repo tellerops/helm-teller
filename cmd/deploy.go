@@ -3,8 +3,9 @@ package cmd
 import (
 	"bytes"
 	"fmt"
-	"helm-teller/pkg"
 	"os"
+
+	"github.com/SpectralOps/helm-teller/pkg"
 
 	"github.com/spf13/cobra"
 )

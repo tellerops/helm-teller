@@ -5,8 +5,8 @@ import (
 	tellerPkg "github.com/spectralops/teller/pkg"
 	"github.com/spf13/cobra"
 
-	"helm-teller/pkg"
-	"helm-teller/pkg/visibility"
+	"github.com/SpectralOps/helm-teller/pkg"
+	"github.com/SpectralOps/helm-teller/pkg/visibility"
 )
 
 var (

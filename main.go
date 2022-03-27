@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"helm-teller/cmd"
+	"github.com/SpectralOps/helm-teller/cmd"
 
 	log "github.com/sirupsen/logrus"
 )

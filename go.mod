@@ -1,4 +1,4 @@
-module helm-teller
+module github.com/SpectralOps/helm-teller
 
 go 1.17
 

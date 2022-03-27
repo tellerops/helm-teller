@@ -1,8 +1,9 @@
 package pkg
 
 import (
-	"helm-teller/testutils"
 	"testing"
+
+	"github.com/SpectralOps/helm-teller/testutils"
 
 	"github.com/stretchr/testify/assert"
 )
