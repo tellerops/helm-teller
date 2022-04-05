@@ -69,7 +69,7 @@ data:
 * Run helm teller deploy `helm teller [install/upgrade] {PLUGIN_FLAGS} -- {NATIVE_HELM_FLAGS}`.
  
 
-See working example [here](./examples/examples.md)
+See working example [here](./examples)
 
 
 ## Contributing
