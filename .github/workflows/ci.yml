@@ -29,7 +29,7 @@ jobs:
       - name: golangci-lint
         uses: golangci/golangci-lint-action@v2
         with:
-          version: v1.44.2
+          version: v1.45.2
           args: --timeout 5m0s
 
       - name: Formatting
